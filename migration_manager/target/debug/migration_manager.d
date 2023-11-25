@@ -1,0 +1,1 @@
+/Users/pascaldachard/Desktop/proj/repo/rust/common/rust-crud-stack/migration_manager/target/debug/migration_manager: /Users/pascaldachard/Desktop/proj/repo/rust/common/rust-crud-stack/migration_manager/src/main.rs
