@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  rust_api:
+    container_name: rust_api
+    image: pascaldachard/rust_api:1.0.0
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+  db:
+    container_name: postgres
+    image: postgres:14.7-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: superuser
+      POSTGRES_PASSWORD: superpassword
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  postgres-data:

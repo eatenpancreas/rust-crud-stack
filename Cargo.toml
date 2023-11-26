@@ -1,0 +1,21 @@
+[package]
+name = "rust_api"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "cruddy"
+path = "cruddy/lib.rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+env_logger = "0.10.1"
+dotenv = "0.15.0"
+diesel = { version = "2.1.4", features = ["postgres", "r2d2", "chrono", "uuid"] }
+actix-web = "4.4.0"
+serde = { version = "1.0.193", features = ["derive"] }
+chrono = { version = "0.4.31", features = ["serde"] }
+uuid = { version = "1.6.1", features = ["v4"] }

@@ -1,10 +1,7 @@
-FROM rust:1.72.0
+FROM rust
 WORKDIR /app
 
-ARG DATABASE_URL
-ENV DATABASE_URL=$DATABASE_URL
-
-COPY /api .
-
+COPY . .
 RUN cargo install --path .
-CMD ["myapp"]
+CMD ["rust_api"]
+EXPOSE 8080
