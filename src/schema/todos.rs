@@ -7,7 +7,7 @@ diesel::table! {
         #[max_length = 255]
         title -> Varchar,
         description -> Nullable<Text>,
-        created_at -> Nullable<Timestamp>,
-        updated_at -> Nullable<Timestamp>,
+        created_at -> Timestamp,
+        updated_at -> Timestamp,
     }
 }
